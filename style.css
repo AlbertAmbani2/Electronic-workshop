@@ -101,14 +101,28 @@ nav .navigation ul li a {
     color: #d84400;
 }
 
-/* nav .burger-wrap{
+ nav .burger-wrap{
     padding: 10px 20px;
+	display: none;
+	} 
+	
+ nav .burger-wrap .burger {
+	 display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 padding: 10px;
+	 color: #5a5a5a;
+	 cursor: pointer;
+ }
+ 
+ nav .burger-wrap .burger:hover {
+  background-color: #e0e0e0;
+  color: #d84400;
+}
 
-} */
-
-/* media queries */
-/* media screen and (max-width: 740px) {
-    nav{
+/* NavBar media queries */
+ @media screen and (max-width: 768px) {
+    nav {
         justify-content:space-between;
         padding: 0px;
     }
@@ -121,12 +135,11 @@ nav .navigation ul li a {
     nav .navigation{
         left: -100vh;
         position: absolute;
-        width: 60%;
+        width: 50%;
         background-color: #e7e7e7;
         min-height: 100vh;
         border-right: 1px solid #bdbdbd;
         transition: left 0.4s;
-
     }
     nav .navigation ul{
         display: block;
@@ -139,7 +152,12 @@ nav .navigation ul li a {
         font-size: 20px;
         padding: 10px 30px;
     }
-} */
+	nav .burger-wrap {
+    display: block;
+  }
+} 
+
+/* End NavBar media queries */
 
 #coverAll{
     width: 100%;
@@ -161,11 +179,14 @@ nav .navigation ul li a {
     justify-content: center;
 }
 
-@media screen and (max-width: 920px){
-    .landing-container{
-        display: flex;
-        justify-content: center;
-    }
+.landing-container .image img{
+	width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 20px;
+	cursor: pointer;
+	
 }
 
 .landing-container .image {
@@ -174,46 +195,11 @@ nav .navigation ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	padding: 50px 0px 0px 0px;
+	justify-content: bottom;
 }
 
-/* media queries */
-@media screen and (max-width: 920px){
-    .landing-container .image{
-        padding: 50px 0px 0px 0px;
-        justify-content: bottom;
-    }
-}
-
-@media screen and (max-width: 460px){
-    .landing-container .image{
-        padding: 0px 0px 0px 0px;
-    }
-
-}
-
-.landing-container .image img{
-    width: 450px;
-}
- /* media query */
- @media screen and (max-width: 580px){
-    .landing-container .image img{
-        width: 350px;
-    }
- }
-
- @media screen and (max-width: 460px){
-    .landing-container .image img{
-        width: 300px;
-    }
- }
-
- @media screen and (max-width: 400px){
-    .landing-container .image img{
-        width: 250px;
-    }
- }
-
- .landing-container text{
+ .landing-container .text{
     flex: 1.25;
     display: flex;
     flex-direction: column;
@@ -236,6 +222,24 @@ nav .navigation ul li a {
     font-size: 24px;
     padding-bottom: 20px;
  }
+ 
+ 
+.landing-container .text .text-content a{
+    text-decoration: none;
+    color: #616161;
+    background-color: whitesmoke;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    border: 0.5px solid #bdbdbd;
+    transition: background-color 0.2s;
+} 
+
+.landing-container .text .text-content a:hover{
+    background-color: #e7e7e7;
+    color: #d84400;
+    transition: background-color 0.4s;
+}
 
  /* text content media queries */
  @media screen and (max-width: 580px){
@@ -268,22 +272,42 @@ nav .navigation ul li a {
     } 
 }
 
-.landing-container .text .text-content a{
-    text-decoration: none;
-    color: #616161;
-    background-color: whitesmoke;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-family: "Roboto", sans-serif;
-    border: 0.5px solid #bdbdbd;
-    transition: background-color 0.2s;
-} 
+/* landing-container media queries */
 
-.landing-container .text .text-content a:hover{
-    background-color: #e7e7e7;
-    color: #d84400;
-    transition: background-color 0.4s;
+@media screen and (max-width: 920px){
+    .landing-container{
+        display: flex;
+        justify-content: center;
+    }
 }
+
+@media screen and (max-width: 460px){
+    .landing-container .image{
+        padding: 0px 0px 0px 0px;
+    }
+
+}
+
+@media screen and (max-width: 580px){
+    .landing-container .image img{
+        width: 350px;
+    }
+ }
+
+ @media screen and (max-width: 460px){
+    .landing-container .image img{
+        width: 300px;
+    }
+ }
+
+ @media screen and (max-width: 400px){
+    .landing-container .image img{
+        width: 250px;
+    }
+ }
+
+/* End landing-container media queries */
+
 
 /* Skills container */
 .skill-container{

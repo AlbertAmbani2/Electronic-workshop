@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>electronics page</title>
 
+	<script src="https://kit.fontawesome.com/056bf81583.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,7 +21,7 @@
         <div class="navigation">
             <ul>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
                 <li><a href="#shop">Shop</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -28,7 +29,7 @@
 
         <div class="burger-wrap" onclick="nav()">
             <div class="burger">
-                <i class="fa fa-bars fa-2x"></i>
+                <i class="fas fa-bars">🐀򖠀</i>
             </div>
         </div>
     </nav>
@@ -44,7 +45,7 @@
                 <h1>SUCCESS IS DEFINED IN UNITS OF FUN</h1>
                 <p>Hello, I'm Engineer ACHOKA. An Electronics Ethusiastic, with a solid knowledge 
                     in repairing hoofers, Smart TVs repairing, DSTV disk and wiring installation</p>
-                    <a href="#skill">know about my work</a>
+                    <a href="#skills">know about my work</a>
             </div>
         </div>
     </div>
@@ -68,8 +69,8 @@
 
     <!-- Projects -->
     <div class="project-container" id="projects">
-        <h1>PROJECTS</h1>
-        <P>This are the projects that I have dealt with.</P>
+        <h1>SERVICES</h1>
+        <P>Services i offer</P>
 
         <div class="project-box">
             <div class="project">
@@ -90,7 +91,7 @@
             <div class="project">
                 <a href="dcudsuchwijci">
                     <div class="image">
-                        <img src="images/projectdcsdcudf..png" alt="project-wk">
+                        <img src="images/projectdcsdcudf.png" alt="project-wk">
                     </div>
 
                     <div class="desc">
@@ -159,9 +160,24 @@
 
         <script>
 
-        </script>
+        function nav(){
+            const nav=document.querySelector(".navigation");
+            if(nav.style.left=="-100vw" || nav.style.left=="")
+            {
+                nav.style.left="0vw";
+                document.getElementById('coverAll').style.display = 'block';
+            }
+            else
+            {
+                document.getElementById('coverAll').style.display = 'none';
+                nav.style.left="-100vw"; 
+				
+			}
 
-       
+        }
+
+
+        </script>       
 
 </body>
 </html>
